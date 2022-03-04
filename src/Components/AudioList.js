@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { FaHeadphones, FaHeart, FaRegClock, FaRegHeart } from "react-icons/fa";
 import styled from "styled-components";
+import MusicPlayer from "./MusicPlayer";
 import { Songs } from "./Songs";
 
 const AudioList = () => {
@@ -38,7 +39,6 @@ const AudioList = () => {
     setSong(song)
     setImage(imgSrc)
   }
-/// 3 42 00
 
   return (
     <AudioContainer>
@@ -75,6 +75,7 @@ const AudioList = () => {
             </div>
           ))}
       </SongsContainer>
+      <MusicPlayer song={songSrc}  img={imageSrc}/>
     </AudioContainer>
   );
 };
